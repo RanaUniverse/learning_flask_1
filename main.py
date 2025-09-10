@@ -29,3 +29,8 @@ def services():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+@app.context_processor
+def inject_current_year():
+    return {"current_year": 2025}

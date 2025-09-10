@@ -1,7 +1,14 @@
 nav {
-    background-color:aliceblue;
-    width: 30%;
+    background-color: aliceblue;
+    width: 100%;
     border: thick double #32a1ce;
+    font-size: clamp(1.8rem, 2vw, 5rem);
+    text-decoration: none;
+
+}
+
+nav ul li a {
+    text-decoration: none;
 }
 
 nav ul li {
@@ -10,4 +17,13 @@ nav ul li {
 
 li {
     list-style-type: circle;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: white;
+    text-align: center;
 }
