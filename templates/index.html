@@ -4,10 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rana Universe Website</title>
+    <title>Rana Universe Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
+    {% include "partials/nav.html" %}
+
+    <h1>What is this Website ???</h1>
+    <p class="informations">
+        Hello User This is My Demo Website. This Website will help you to learn Python and host a website in python.
+    </p>
+    <br>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga est quaerat nobis mollitia totam
+        voluptatum repellat dignissimos ad ea eos odio illum eaque, facere fugit sunt quod reiciendis adipisci, quo,
+        harum nemo! Earum mollitia ex perferendis, vel consequatur praesentium rem architecto nemo dignissimos eos nisi
+        repudiandae ducimus. Dolore, voluptate!
+    </p>
+
+    {% include "partials/footer.html" %}
 
 </body>
 

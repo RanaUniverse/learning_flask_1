@@ -13,28 +13,14 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('index_page') }}">Home Page</a></li>
-            <li><a href="{{ url_for('about') }}">About This Website Page</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact Page Here</a></li>
-            <li><a href="{{ url_for('services') }}">Services Related Page</a></li>
-        </ul>
-    </nav>
+    {% include "partials/nav.html" %}
     <div class="content">
         {% block content %}
         This is Default Content
         {% endblock %}
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; Rana Universe ({{ current_year | default(2000)}}).
-                <br>
-                All rights reserved.
-            </p>
-        </div>
-    </footer>
+    {% include "partials/footer.html" %}
 
 </body>
 
