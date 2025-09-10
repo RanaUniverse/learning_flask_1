@@ -1,6 +1,31 @@
-def main():
-    print("Hello from learning-flask-1!")
+from flask import (
+    Flask,
+    render_template,
+)
+
+app = Flask(__name__)
 
 
-if __name__ == "__main__":
-    main()
+@app.route("/")
+def index_page():
+    return render_template("index.html")
+
+
+@app.route("/user/<int:name>")
+def user(name: str):
+    return f"Hello {name}"
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+@app.route("/services")
+def services():
+    return render_template("services.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")

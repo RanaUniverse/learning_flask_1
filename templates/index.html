@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Rana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+
+<body>
+
+
+    <!-- Navigation Bar -->
+
+    <nav>
+        <ul>
+            <!-- <li><a href="index.html">Home Page</a> </li>
+            <li><a href="about.html">About This Website Page</a> </li>
+            <li><a href="services.html">Services Related Page</a></li> -->
+            <!-- <li><a href="contact.html">Contact Page Here</a> </li> -->
+            <li><a href="{{ url_for('index_page') }}">Home Page</a></li>
+            <li><a href="{{ url_for('about') }}">About This Website Page</a></li>
+            <li><a href="{{ url_for('services') }}">Services Related Page</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Page Here</a></li>
+
+
+
+        </ul>
+    </nav>
+
+
+    <div class="heading">
+        <h1>Rana Universe Heading</h1>
+    </div>
+
+    <h2>Writing a Form Fillup</h2>
+
+    <h3>Writing Text Forms</h3>
+
+    <form action="">
+        <!-- belos i am using the class of 'text-lable' so that for text input's label i can add a extra css for saying somethign to users -->
+        <label for="fname" class="text-label">Write First Name</label>
+        <br>
+        <input type="text" name="fname" id="fname" placeholder="Rana (Example)">
+        <br>
+        <label for="lname" class="text-label">Write Last Name</label>
+        <br>
+        <input type="text" name="lname" id="lname" placeholder="Universe (Example)">
+        <br>
+        <label for="email_id" class="text-label">Your Email Id</label>
+        <br>
+        <input type="email" name="email_id" id="email_id" placeholder="RanaUniverse321@gmail.com 
+        (Example)">
+        <br>
+        <label for="pass_id" class="text-label">Enter Password Below</label>
+        <br>
+        <input type="password" name="pass" id="pass_id" placeholder="private value here.">
+
+        <br>
+        What is Your Gender ?
+        <br>
+        <label>
+            I am a Boy
+            <br>
+            <input type="radio" name="sex" value="male">
+        </label>
+        <br>
+
+        <label>
+            I am a Girl
+            <br>
+            <input type="radio" name="sex" value="female">
+        </label>
+        <br>
+
+        <label>
+            I am a 3rd Gender
+            <br>
+            <input type="radio" name="sex" value="both">
+        </label>
+        <br>
+
+        <label>
+            I Don't Want to say
+            <br>
+            <input type="radio" name="sex" value="not_say">
+        </label>
+
+        <br> <br>
+        <input type="submit" id="submitBtn" value="Submit The Form">
+        <br>
+
+
+    </form>
+
+
+
+    <h3>Some Radio Related Forms</h3>
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+
+    <h3>A Different Form Below</h3>
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+    </form>
+
+
+
+
+
+    <h2>Writing a Table Here </h2>
+
+    <table>
+
+        <caption>&bull; This is Marksheet &bull;</caption>
+
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Mark</th>
+        </tr>
+
+        <tr>
+            <td>Roman Reigns</td>
+            <td>Mathematics</td>
+            <td>70</td>
+        </tr>
+
+        <tr>
+            <td>John Cena</td>
+            <td>English</td>
+            <td>70</td>
+        </tr>
+
+        <tr>
+            <td>Randy Orton</td>
+            <td>Physics</td>
+            <td>97</td>
+        </tr>
+
+        <tr>
+            <td>Rana Universe</td>
+            <td class="scrollable-cell">
+                He scores all
+                SUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTSSUBJECTS
+                with full marks a good
+            </td>
+            <td>100</td>
+        </tr>
+
+    </table>
+
+
+
+    <h2>I will write a para in box</h2>
+
+
+    <div class="box">
+        <p>
+            This Box is made using @media so it will work diffenret animation in different devices.
+            <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptas animi, ipsam quidem non veniam,
+            placeat minima temporibus accusantium at ex vitae distinctio dolor alias reiciendis eveniet cum incidunt
+            vero expedita. Sit hic harum repellat expedita dolor facere recusandae? Magni officia libero iste dicta.
+            Sint soluta inventore officiis dolorum neque.
+        </p>
+    </div>
+
+
+
+
+    <h2>I will write some pargraph in a box.</h2>
+
+    <div class="box-paragraph">
+        <!-- this case the Big exceed the line so i should use line-break -->
+        <p>
+            BIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIGBIG
+            Lorem ipsum dolor sit, amet adipisicing elit. Soluta dolores non
+            facilis, fuga eos tenetur sunt dolorum, possimus cumque nulla ipsa. Debitis, sequi quibusdam.
+            Necessitatibus, rem eveniet ut animi eius veritatis, nam et sed eaque tenetur, nisi consequatur ex dolore at
+            neque sit obcaecati unde? Eveniet provident ipsum soluta reiciendis pariatur maxime repellendus, explicabo
+            modi placeat fuga tempora velit ipsa, eligendi quo, nulla beatae non. Incidunt fugit velit voluptatum ullam!
+        </p>
+    </div>
+
+
+
+    <section>
+        <h2>Some HTML Symbols</h2>
+        <ul>
+            <li>The Copyright Symbol is: &copy;</li>
+            <li>Registered Trademark is: &reg;</li>
+            <li>Euro Sign is: &euro;</li>
+            <li>Trademark Sign is: &trade;</li>
+
+            <div class="arrow-break">
+                Belows are some arrows
+            </div>
+            <li>Up Arrow is: &uparrow;</li>
+            <li>Right Arrow is: &RightArrow;</li>
+            <li>Down Arrow is: &downarrow;</li>
+            <li>Left Arrow is: &leftarrow;</li>
+            <div class="arrow-break">
+                This has the arrows again
+            </div>
+
+            <li>Up Arrow is: &uarr;;</li>
+            <li>Right Arrow is: &rarr;;</li>
+            <li>Down Arrow is: &darr;;</li>
+            <li>Left Arrow is: &larr;;</li>
+            <li>Horizontal Arrow (left and right): &harr;</li>
+            <div class="arrow-break">
+
+                The arrows has end here
+            </div>
+            <li>Spade Logo is: &spades;</li>
+            <li>Club Logo is: &clubs;</li>
+            <li>Heart Logo is: &hearts;</li>
+            <li>Diamond Logo is: &diams;;</li>
+        </ul>
+    </section>
+
+
+
+    <div class="paragraph-box">
+        <p>
+            Simple Simple Simple Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque eius suscipit
+            atque explicabo id
+            praesentium! Repellat magni laborum omnis consectetur, ex dolorum nulla soluta similique. Dolore dignissimos
+            voluptates sequi mollitia sed quae, ullam unde ipsam! Sit aspernatur repellat in, eius amet perspiciatis
+            praesentium eos a non, sint deleniti. Distinctio.
+        </p>
+    </div>
+
+    <div class="paragraph-box highlight">
+        <p>
+            highlight highlight highlight Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempore quia
+            nisi laboriosam pariatur voluptatem, ex voluptatibus! Et ipsam, perspiciatis ab repellat, dolorem ea eos
+            incidunt voluptates neque aliquid ad.
+        </p>
+    </div>
+
+
+    <div class="paragraph-box important">
+
+        <p>
+            Important Important Important Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Quis expedita dolores enim quam tempore nam ut officia magni consequuntur tempora possimus
+            mollitia, labore ullam aliquid quibusdam quae totam molestias laboriosam.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

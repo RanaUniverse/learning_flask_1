@@ -1,0 +1,207 @@
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 20px;
+     font-size: 20px;
+ }
+
+
+ .heading {
+     text-align: center;
+     color: darkblue;
+     padding: 20px;
+     margin: 0 auto;
+     width: 50%;
+     border: thick double rgb(57, 9, 231);
+     box-sizing: border-box;
+ }
+
+ p {
+     color: black;
+     line-height: 1.6;
+     background-color: transparent;
+ }
+
+ .paragraph-box {
+     background-color: lightgray;
+     padding: 15px;
+     margin: 15px 0;
+     border: thick double #32a1ce;
+     border-radius: 18px;
+ }
+
+ .highlight {
+     background-color: aquamarine;
+     border-color: blueviolet;
+     border-radius: 28px;
+ }
+
+ .important {
+     background-color: burlywood;
+     border-color: red;
+ }
+
+ .important p {
+     color: green;
+ }
+
+ .arrow-break {
+     color: red;
+ }
+
+ .box-paragraph {
+     width: 75%;
+     background-color: rgb(238, 241, 16);
+     border: 4mm ridge rgba(100, 230, 197, 0.6);
+     /* border-radius: 15px; */
+     color: red;
+     margin: auto;
+
+ }
+
+ .box-paragraph p {
+     word-wrap: break-word;
+     color: red;
+     /* hyphens: auto; */
+     font-size: 20px;
+ }
+
+
+ /* Default (for big screens) */
+ .box {
+     width: 75%;
+     font-size: 20px;
+     background-color: green;
+ }
+
+ /* For tablets (screen width <= 768px) */
+ @media (max-width: 768px) {
+     .box {
+         width: 90%;
+         font-size: 18px;
+         background-color: red;
+     }
+ }
+
+ /* For mobiles (screen width <=480px)  */
+ @media (max-width: 480px) {
+     .box {
+         width: 100%;
+         font-size: 16px;
+         background-color: blue;
+     }
+ }
+
+ table {
+     width: 80%;
+     font-family: sans-serif;
+     border: 2px solid red;
+     margin: auto;
+     table-layout: fixed;
+     border-collapse: collapse;
+     word-wrap: break-word;
+ }
+
+ th,
+ td {
+     border: 1px solid;
+ }
+
+
+ caption {
+     caption-side: bottom;
+     padding: 10px;
+     font-weight: bold;
+ }
+
+ .scrollable-cell {
+     max-height: 50px;
+     overflow-y: auto;
+     display: block;
+     color: green;
+     background-color: aqua;
+ }
+
+ #submitBtn {
+     color: white;
+     background-color: green;
+     padding: 12px;
+     /* <-- Fixed spacing here */
+     border: 5px ridge rgb(211 220 50 / 0.6);
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+
+
+ label {
+     color: blue;
+     font-weight: bold;
+     font-size: 15px;
+ }
+
+ /* Style only labels that contain a radio input */
+ label:has(input[type="radio"]) {
+     display: block;
+     border: 2px solid #ccc;
+     border-radius: 8px;
+     padding: 10px;
+     margin: 10px 0;
+     cursor: pointer;
+     transition: 0.3s;
+     width: 50%;
+ }
+
+ /* Hover effect */
+ label:has(input[type="radio"]):hover {
+     border-color: #666;
+     background: #f9f9f9;
+ }
+
+ /* When radio is checked, highlight the box */
+ label:has(input[type="radio"]:checked) {
+     border-color: red;
+     background: cornflowerblue;
+     font-weight: bold;
+ }
+
+
+
+ /* below will add some extra words in those label */
+
+
+ .text-label::before {
+     content: "👉";
+     color: red;
+ }
+
+
+ .text-label::after {
+     content: " (Write Down)👇";
+     color: red;
+ }
+
+
+ /* Default style for all radios */
+ input[type="radio"] {
+     accent-color: gray;
+ }
+
+ /* Male */
+ input[type="radio"][value="male"] {
+     accent-color: blue;
+ }
+
+ /* Female */
+ input[type="radio"][value="female"] {
+     accent-color: deeppink;
+ }
+
+ /* 3rd Gender */
+ input[type="radio"][value="both"] {
+     accent-color: purple;
+ }
+
+ /* Not Say */
+ input[type="radio"][value="not_say"] {
+     accent-color: orange;
+ }
