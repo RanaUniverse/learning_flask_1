@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layout.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Customer charset</title>
-</head>
+{% block title %}
+You Can Contact Our Service Center
+{% endblock %}
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('index_page') }}">Home Page</a></li>
-            <li><a href="{{ url_for('about') }}">About This Website Page</a></li>
-            <li><a href="{{ url_for('services') }}">Services Related Page</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact Page Here</a></li>
-        </ul>
-    </nav>
-    <h1>YOu can cantact Customer Care Here</h1>
-</body>
-
-</html>
+{% block content %}
+<h1>You Can Contact Me Here</h1>
+<p>
+    Mail Us on:
+    <br>
+    RanaUniverse321@gmail.com
+</p>
+{% endblock %}

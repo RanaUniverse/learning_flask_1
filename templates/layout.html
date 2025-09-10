@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Rana Universe Title
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout_styles.css') }}">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index_page') }}">Home Page</a></li>
+            <li><a href="{{ url_for('about') }}">About This Website Page</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Page Here</a></li>
+            <li><a href="{{ url_for('services') }}">Services Related Page</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        {% block content %}
+        This is Default Content
+        {% endblock %}
+    </div>
+</body>
+
+</html>

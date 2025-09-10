@@ -1,0 +1,13 @@
+nav {
+    background-color:aliceblue;
+    width: 30%;
+    border: thick double #32a1ce;
+}
+
+nav ul li {
+    list-style-type: square;
+}
+
+li {
+    list-style-type: circle;
+}
