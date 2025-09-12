@@ -31,6 +31,11 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route("/demo_form")
+def demo_form():
+    return render_template("demo_form.html")
+
+
 @app.context_processor
 def inject_current_year():
     return {"current_year": 2025}
