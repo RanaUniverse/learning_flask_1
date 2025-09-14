@@ -11,9 +11,14 @@ def index_page():
     return render_template("index.html")
 
 
-@app.route("/user/<int:name>")
-def user(name: str):
-    return f"Hello {name}"
+@app.route("/user/<int:user_id>")
+def user(user_id: int):
+    return f"Hello User, Your User Id Is: {user_id}"
+
+
+@app.route("/user/<string:user_name>")
+def user_with_name(user_name: str):
+    return f"Hello User, You Have a Username:\n {user_name}"
 
 
 @app.route("/about")
