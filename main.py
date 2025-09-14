@@ -1,6 +1,7 @@
 from flask import (
     Flask,
     render_template,
+    request,
 )
 
 app = Flask(__name__)
@@ -37,8 +38,22 @@ def contact():
 
 
 @app.route("/demo_form")
-def demo_form():
+def demo_form_get():
     return render_template("demo_form.html")
+
+
+@app.post("/demo_form")
+def demo_form_post():
+    fname = request.form.get("fname")
+    lname = request.form.get("lname")
+    question = request.form.get("question")
+
+    return render_template(
+        "demo_form_result.html",
+        fname=fname,
+        lname=lname,
+        question=question,
+    )
 
 
 @app.context_processor

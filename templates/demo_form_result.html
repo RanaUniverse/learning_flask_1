@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Hello You Have Submit The Demo Form</h1>
+<p><b>First Name:</b> {{ fname }}</p>
+<p><b>Last Name:</b> {{ lname }}</p>
+<p><b>Question:</b> {{ question }}</p>
+
+<h2>
+    <a href="{{ url_for('demo_form_get') }}">Go To Fill Form Again</a>
+</h2>
+{% endblock %}
