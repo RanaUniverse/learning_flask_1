@@ -14,12 +14,18 @@ def index_page():
 
 @app.route("/user/<int:user_id>")
 def user(user_id: int):
-    return f"Hello User, Your User Id Is: {user_id}"
+    return (
+        f"<h1>Hello User, Your User Id Is: {user_id}<br><br>"
+        "You will see your information page here.</h1>"
+    )
 
 
-@app.route("/user/<string:user_name>")
+@app.route("/username/<string:user_name>")
 def user_with_name(user_name: str):
-    return f"Hello User, You Have a Username:\n {user_name}"
+    return (
+        f"<h1>Hello User, You Have a Username: {user_name}<br><br>"
+        "You will see your information page here.</h1>"
+    )
 
 
 @app.route("/about")
